@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52220580233BD1B00057676C /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222057F233BD1B00057676C /* UIImageExtensions.swift */; };
 		52350DC5233A7E2E007F2937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52350DC4233A7E2E007F2937 /* AppDelegate.swift */; };
 		52350DC7233A7E2E007F2937 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52350DC6233A7E2E007F2937 /* SceneDelegate.swift */; };
 		52350DC9233A7E2E007F2937 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52350DC8233A7E2E007F2937 /* MainView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5222057F233BD1B00057676C /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		52350DC1233A7E2E007F2937 /* ImagePickerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePickerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52350DC4233A7E2E007F2937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52350DC6233A7E2E007F2937 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				52350DD8233A821A007F2937 /* ImagePickerController.swift */,
 				52350DDA233A82D6007F2937 /* ImagePickerViewModel.swift */,
 				52350DDC233A83B9007F2937 /* NotificationExtensions.swift */,
+				5222057F233BD1B00057676C /* UIImageExtensions.swift */,
 				52350DCA233A7E30007F2937 /* Assets.xcassets */,
 				52350DCF233A7E30007F2937 /* LaunchScreen.storyboard */,
 				52350DD2233A7E30007F2937 /* Info.plist */,
@@ -157,6 +160,7 @@
 			files = (
 				52350DD9233A821A007F2937 /* ImagePickerController.swift in Sources */,
 				52350DDB233A82D6007F2937 /* ImagePickerViewModel.swift in Sources */,
+				52220580233BD1B00057676C /* UIImageExtensions.swift in Sources */,
 				52350DC5233A7E2E007F2937 /* AppDelegate.swift in Sources */,
 				52350DC7233A7E2E007F2937 /* SceneDelegate.swift in Sources */,
 				52350DDD233A83B9007F2937 /* NotificationExtensions.swift in Sources */,

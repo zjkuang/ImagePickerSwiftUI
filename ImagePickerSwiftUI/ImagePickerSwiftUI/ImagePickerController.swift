@@ -34,8 +34,11 @@ struct ImagePickerController: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let uiImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                let image = Image(uiImage: uiImage)
-                NotificationCenter.default.post(name: .imagePickerDidPickImage, object: image)
+                // let imageOrientation = uiImage.imageOrientation // photos taken by camera usually do not have a correct imageOrientation
+                if let uiImageAdjusted = uiImage.upOrientationImage() {
+                    let image = Image(uiImage: uiImageAdjusted)
+                    NotificationCenter.default.post(name: .imagePickerDidPickImage, object: image)
+                }
             }
             picker.dismiss(animated: true)
         }
