@@ -8,8 +8,6 @@
 
 import Foundation
 
-let notificationImagePicked = "notificationImagePicked"
-
 class ImagePickerViewModel: ObservableObject {
     
     @Published var image: Any?
@@ -22,6 +20,10 @@ class ImagePickerViewModel: ObservableObject {
         if let image = notification.object {
             self.image = image
         }
+    }
+    
+    func clear() {
+        image = nil
     }
     
 }

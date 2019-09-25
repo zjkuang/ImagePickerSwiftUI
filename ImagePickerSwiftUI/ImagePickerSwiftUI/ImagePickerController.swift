@@ -10,19 +10,21 @@ import SwiftUI
 
 struct ImagePickerController: UIViewControllerRepresentable {
     
+    let sourceType: UIImagePickerController.SourceType
+    
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.sourceType = sourceType
         imagePickerController.delegate = context.coordinator
         return imagePickerController
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-        //
+        uiViewController.sourceType = sourceType
     }
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
