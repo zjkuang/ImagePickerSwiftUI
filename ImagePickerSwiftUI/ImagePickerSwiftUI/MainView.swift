@@ -12,7 +12,7 @@ import Photos
 
 struct MainView: View {
     
-    @ObservedObject private var imagePickerViewModel = ImagePickerViewModel()
+    @ObservedObject private var viewModel = ImagePickerViewModel()
     @State private var showActionSheet = false
     @State private var presentSheet = false
     @State private var showAlert = false
@@ -28,11 +28,11 @@ struct MainView: View {
         NavigationView {
             Group {
                 VStack {
-                    (imagePickerViewModel.image as? Image)?
+                    (viewModel.image as? Image)?
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                     
-                    Button((imagePickerViewModel.image == nil) ? "Take a picture" : "Re-take") {
+                    Button((viewModel.image == nil) ? "Take a picture" : "Retake") {
                         self.showActionSheet.toggle()
                     }
                 }
@@ -54,9 +54,12 @@ struct MainView: View {
     }
     
     private var trailingItems: some View {
-        Button("Clear") {
-            self.imagePickerViewModel.clear()
+        Button(action: {
+            self.viewModel.clear()
+        }) {
+            Image(systemName: "trash.fill")
         }
+        .disabled(viewModel.image == nil)
     }
     
     private var actionSheetView: ActionSheet {
